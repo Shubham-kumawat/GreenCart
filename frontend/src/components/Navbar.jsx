@@ -47,7 +47,7 @@ function Navbar() {
         {!user ? (
           <button
             onClick={() => setShowUserLogin(true)}
-            className="cursor-pointer px-8 py-2 bg-[#4be49d]  hover:bg-[#44ae7c] transition text-white rounded-full"
+            className="cursor-pointer px-8 py-2 bg-[#4fbf8b]  hover:bg-[#44ae7c] transition text-white rounded-full"
           >
             Login
           </button>

@@ -14,7 +14,7 @@ function NewsLetter() {
                     placeholder="Enter your email id"
                     required
                 />
-                <button type="submit" className="md:px-12 px-8 h-full text-white bg-[#4be49d] hover:bg-[#44ae7c] transition-all cursor-pointer rounded-md rounded-l-none">
+                <button type="submit" className="md:px-12 px-8 h-full text-white bg-[#4fbf8b] hover:bg-[#44ae7c] transition-all cursor-pointer rounded-md rounded-l-none">
                     Subscribe
                 </button>
             </form>

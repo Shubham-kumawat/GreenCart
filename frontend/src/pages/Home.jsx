@@ -5,6 +5,7 @@ import BestSeller from '../components/BestSeller'
 import BottomBanner from '../components/BottomBanner'
 import NewsLetter from '../components/NewsLetter'
 
+
 function Home() {
   return (
     <div className='mt-10'>
@@ -13,6 +14,7 @@ function Home() {
         <BestSeller/>
         <BottomBanner/>
         <NewsLetter/>
+     
     </div>
   )
 }

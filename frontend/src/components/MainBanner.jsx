@@ -13,7 +13,7 @@ function MainBanner() {
       
 
         <div className='flex itmes-center mt-6 font-medium'>
-            <Link to={"/products"} className='group flex items-center gap-2 px-7 md:px-9 py-3 bg-[#4be49d] hover:bg-[#44ae7c] transition rounded text-white cursor-pointer'>
+            <Link to={"/products"} className='group flex items-center gap-2 px-7 md:px-9 py-3 bg-[#4fbf8b] hover:bg-[#44ae7c] transition rounded text-white cursor-pointer'>
             Shop now
             <img className='md:hidden transition group-focus:translate-x-1' src={assets.white_arrow_icon} alt="arrow" />
             </Link>
