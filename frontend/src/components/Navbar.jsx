@@ -4,7 +4,6 @@ import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 
 function Navbar() {
-  const [open, setOpen] = React.useState(false);
   const { user, setUser, setShowUserLogin, navigate,searchQuery, setSearchQuery } = useAppContext();
 
   const logout = async () => {
