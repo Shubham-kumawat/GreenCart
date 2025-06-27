@@ -24,10 +24,10 @@ const Product = ({product}) => {
                     <p>({4})</p>
                 </div>
                 <div className="flex items-end justify-between mt-3">
-                    <p className="md:text-xl text-base font-medium text-primary ">
+                    <p className="md:text-xl text-base font-medium text-[#4fbf8b] ">
                         {currency}Rs {product.offerPrice}{" "} <span className="text-gray-500/60 md:text-sm text-xs line-through"> {currency} Rs {product.price}</span>
                     </p>
-                    <div onClick={(e) =>{e.stopPropagation();}} className="text-primary">
+                    <div onClick={(e) =>{e.stopPropagation();}} className="text-[#4fbf8b]">
                         {!cartItems[product._id]? (
                             <button className="flex items-center justify-center gap-1 bg-primary/40 border border-primary/10 md:w-[80px] w-[64px] h-[34px] rounded text-primary font-medium cursor-pointer" onClick={() => addToCart(product._id)} >
                                 <img src={assets.cart_icon} alt="cart_icon" />
