@@ -30,7 +30,7 @@ function AddAddress() {
     const handleChange =(e)=>{
         const {name, value} = e.target;
 
-        setAddress(()=>({
+        setAddress((prevAddress)=>({
             ...prevAddress,[name]:value,
         }))
     }
