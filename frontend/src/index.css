@@ -28,3 +28,8 @@
 .bg-primary-dull {
   background-color: var(--color-primary-dull);
 }
+
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
