@@ -9,6 +9,7 @@ const Cart = () => {
     const [cartArray, setCartArray] = useState([]);  
 
     const [showAddress, setShowAddress] = useState(dummyAddress);
+    const [addresses , setAddresses] = useState(dummyAddress)
     const [selectedAddress, setSelectedAddress] = useState(dummyAddress[0]);
     const [paymentOptions, setPaymentOptions] = useState("COD");
 
@@ -115,7 +116,7 @@ const Cart = () => {
             </button>
             {showAddress && (
               <div className="absolute top-12 py-1 bg-white border border-gray-300 text-sm w-full">
-               {dummyAddress.map((address, index)=>(
+               {addresses.map((address, index)=>(
                  <p
                   onClick={() =>  {setSelectedAddress(address);setShowAddress(false)}}
                   className="text-gray-500 p-2 hover:bg-gray-100"
