@@ -78,18 +78,14 @@ function AddAddress() {
                        />
                        </div>
 
-                        <div className='grid grid-cols-2 gap-4'>
-                         <  InputField handleChange={handleChange} address={address} name='city'
-                      type='text' placeholder="City"
-                       />
-                        <  InputField handleChange={handleChange} address={address} name='phone'
+                                               <  InputField handleChange={handleChange} address={address} name='phone'
                       type='text' placeholder="Phone"
                        />
 
                        <button className='w-full mt-6 bg-[#4fbf8b] text-white py-3 hover:bg-[#44ae7c] transition cursor-pointer uppercase'>
                         Save address
                        </button>
-                       </div>
+                       
                 </form>
             </div>
             <img className='md:mr-16 mb-16 md:mt-0' src={assets.add_address_iamge} alt="Add Address" />
