@@ -1,4 +1,4 @@
-import Product from "../models/Product";
+import Product from "../models/Product.js";
 
 //add product : api/product/add
 export const addProduct = async (req, res) => {
@@ -18,11 +18,11 @@ try {
         
             await Product.create({...productData, images: imagesUrl})
 
-            res.json({ success:true, message: "Product added successfully"})
+           return res.json({ success:true, message: "Product added successfully"})
     } catch (error) {
         
         console.log(error.message);
-        res.json({ success: false, message: error.message})
+       return res.json({ success: false, message: error.message})
         }
 
 }
@@ -33,11 +33,11 @@ try {
 export const productList = async (req, res) => {
         try {
                 const products = await Product.find({})
-                res.json({ success: true, products})
+             return   res.json({ success: true, products})
                 
         } catch (error) {
                console.log(error.message);
-        res.json({ success: false, message: error.message})   
+      return  res.json({ success: false, message: error.message})   
         }
 
 }
@@ -48,10 +48,10 @@ export const productById = async (req, res) => {
         try {
                 const {id} = req.body
                 const product = await Product.findById(id)
-                res.json({ success: true, product})
+             return   res.json({ success: true, product})
         } catch (error) {
                 console.log(error.message);
-        res.json({ success: false, message: error.message})
+       return res.json({ success: false, message: error.message})
         }
 
 }
@@ -65,6 +65,6 @@ export const changeStock = async (req, res) => {
                 res.json({ success: true, message: "Product stock updated successfully"})
         } catch (error) {
          console.log(error.message);
-        res.json({ success: false, message: error.message})
+      return  res.json({ success: false, message: error.message})
         }
 }
