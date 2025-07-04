@@ -5,13 +5,18 @@ import { categories } from '../assets/assets'
 import ProductCard from '../components/ProductCard'
 
 function ProductCategory() {
-    const {products} = useAppContext()
+    const {products} = useAppContext([])
     const {category} = useParams()
 
-    const searchCategory = categories.find((item)=> item.path.toLowerCase()
-=== category)
+    const searchCategory = categories.find((item)=> item.path.toLowerCase() === category)
 
-    const filteredProducts = products.filter((product)=>product.category.toLowerCase()=== category)
+    // const filteredProducts = products.filter((product)=>product.category.toLowerCase()  === category)
+    const filteredProducts = products.filter(
+  (product) =>
+    typeof product.category === 'string' &&
+    product.category.toLowerCase() === category
+);
+
   return (
     <div className='mt-16'>
         {searchCategory &&(

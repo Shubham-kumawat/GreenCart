@@ -1,6 +1,6 @@
 import { Children, createContext, useState,useContext, useEffect  } from "react";
 import { useNavigate } from "react-router-dom";
-import { dummyOrders, dummyProducts } from "../assets/assets";
+
 import toast from "react-hot-toast";
 import axios from "axios";
 
@@ -35,6 +35,20 @@ export const AppContextProvider = ({children})=>{
         } catch (error) {
             setIsSeller(false)
             
+        }
+    }
+
+    //fech user auth status , user data or cart itmes
+
+    const fetchUser = async ()=>{
+        try {
+            const {data} = await axios.get("/api/user/is-auth");
+            if(data.success){
+                setUser(data.user)
+                setCartItems(data.user.cartItems)
+            }
+        } catch (error) {
+            setUser(null)
         }
     }
 
@@ -118,6 +132,7 @@ export const AppContextProvider = ({children})=>{
     useEffect(()=>{
         fetchSeller()
         fetchProducts()
+        fetchUser()
     },[])
 
     const value = {navigate, user ,setUser, setIsSeller, isSeller, showUserLogin, setShowUserLogin, products, currency,
