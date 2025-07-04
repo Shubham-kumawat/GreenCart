@@ -2,12 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
   "scripts": {
-    
     "start": "node server.js",
     "server": "nodemon server.js"
   },
