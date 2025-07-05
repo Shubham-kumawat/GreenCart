@@ -3,16 +3,26 @@ import { useAppContext } from "../../context/AppContext";
 import { useState, useEffect } from "react";
 
 const Orders = () => {
-  const { currency } = useAppContext();
-  const [orders, setOrders] = useState([]);
+  const { currency,axios} = useAppContext();
+  const [orders, setOrders ] = useState([]);
 
   const fetchOrders = async () => {
-    setOrders(dummyOrders);
+    try {
+      const { data } = await axios.get("/api/order/seller");
+       console.log(data.orders);
+      if (data.success) {
+        setOrders(data.orders);
+      } else {
+        toast.error("Failed to fetch orders");
+      }
+    } catch (error) {
+      toast.error("Failed to fetch orders");
+    }
   };
 
   useEffect(() => {
     fetchOrders();
-  }, []);
+  },[]);
   return (
     <div className="no-scrollbar flex-1 h-[95vh] overflow-y-scroll">
       <div className="md:p-10 p-4 space-y-4">
@@ -42,22 +52,21 @@ const Orders = () => {
 
             <div className="text-sm md:text-base text-black/60">
               <p className="text-black/80">
-                {order.address.firstName} {order.address.lastName}
+                {order.address?.firstName} {order.address?.lastName}
               </p>
               <p>
-                {order.address.street}, {order.address.city}
+                {order.address?.street}, {order.address?.city}
               </p>
               <p>
-                {order.address.state},{order.address.zipcode},{" "}
-                {order.address.country}
+                {order.address?.state},{order.address?.zipcode},{" "}
+                {order.address?.country}
               </p>
               <p></p>
-              <p>{order.address.phone}</p>
+              <p>{order.address?.phone}</p>
             </div>
 
             <p className="font-medium text-lg md:text-base text-black/60">
-              {currency}
-              {order.amount}
+              {currency}{order.amount}
             </p>
 
             <div className="flex flex-col text-sm">
