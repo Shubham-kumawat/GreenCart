@@ -17,7 +17,7 @@ export const placeOrderCOD = async (req, res) => {
     for (const item of items) {
       const product = await Product.findById(item.product);
       
-     
+      amount += product.offerPrice * item.quantity;
     }
     amount += Math.floor(amount * 0.02);
 
@@ -60,6 +60,7 @@ export const placeOrderStripe = async (req, res) => {
         quantity: item.quantity,
 
       });
+       amount += product.offerPrice * item.quantity;
     }
     amount += Math.floor(amount * 0.02);
   
@@ -165,22 +166,7 @@ export const stripeWebhook = async (req, res) => {
  }
  response.json({ received: true });
 }
-// get orders by user id : /api/order/user
 
-// export const getUserOrders = async (req, res) => {
-//   try {
-//   const userId = req.query.userId;
-//     const orders = await Order.find({
-//       userId,
-//       $or: [{ paymentType: "COD" }, { isPaid: true }],
-//     })
-//       .populate("items.product")
-//       .sort({ createdAt: -1 });
-//     return res.json({ success: true, orders });
-//   } catch (error) {
-//     res.json({ success: false, message: error.message });
-//   }
-// };
 export const getUserOrders = async (req, res) => {
   try {
     const userId = req.query.userId; // from frontend GET request query
