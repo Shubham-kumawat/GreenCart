@@ -12,7 +12,7 @@ import ProductDetails from "./pages/ProductDetails.jsx";
 import Cart from "./pages/Cart.jsx";
 import AddAddress from "./pages/AddAddress.jsx";
 import MyOrders from "./pages/MyOrders.jsx";
-import SellerLogin from "./components/Seller/SellerLogin.jsx";
+import SellerLogin from "./components/seller/SellerLogin.jsx";
 import SellerLayout from "./pages/seller/SellerLayout.jsx";
 import AddProduct from "./pages/seller/AddProduct.jsx";
 import ProductList from "./pages/seller/ProductList.jsx";
