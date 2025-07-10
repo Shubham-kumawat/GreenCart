@@ -11,7 +11,7 @@ const Footer = () =>{
             <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500">
                 <div>
                     <div className="flex items-center">
-          <img  className="h-9 " src="/src/assets/favicon.png" alt="logo" />
+          <img  className="h-9 " src={assets.logo}  alt="logo" />
         <p className="text-green-700 font-bold text-3xl">Grocer<span className="text-orange-500 text-3xl font-bold">in</span></p>
         </div>
                     <p className="max-w-[410px] mt-6">We deliver fresh groceries and snacks straight to your door. Trusted by thousands, we aim to make your shopping experience simple and affordable.</p>
