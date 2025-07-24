@@ -36,22 +36,24 @@
 ---
 
 ## 📁 Folder Structure
-
-```bash
 grocerin/
-├── frontend/       # React.js app
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── utils/
-│   │   └── App.jsx
-├── server/         # Node.js + Express backend
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   ├── middlewares/
-│   └── index.js
-
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── uploads/
+│ ├── .env
+│ ├── server.js
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ ├── index.js
+│ ├── public/
+│ ├── tailwind.config.js
+│ ├── package.json
+├── README.md
 ---
 
 # ⚙️ Getting Started
@@ -120,6 +122,6 @@ cd grocerin
 
 ---
 
-##🌍 Live Demo
+## 🌍 Live Demo
 🔗 https://grocerin-ux6p.vercel.app/
 
