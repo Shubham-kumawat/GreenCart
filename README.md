@@ -35,28 +35,6 @@
 
 ---
 
-## 📁 Folder Structure
-- grocerin/
-  ├── backend/
-  │ ├── controllers/
-  │ ├── models/
-  │ ├── routes/
-  │ ├── uploads/
-  │ ├── .env
-  │ ├── server.js
-  ├── frontend/
-  │ ├── src/
-  │ │ ├── components/
-  │ │ ├── pages/
-  │ │ ├── App.jsx
-  │ │ ├── index.js
-  │ ├── public/
-  │ ├── tailwind.config.js
-  │ ├── package.json
-  ├── README.md
-
----
-
 # ⚙️ Getting Started
 
 ##🔧 Clone the Project
