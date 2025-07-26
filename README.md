@@ -2,7 +2,7 @@
 
 ## 🚀 Project Demo
 
-![Demo](./assets/demo.gif)
+!(frontend/src/assets/demo.gif)
 
 
 **Grocerin** is a modern full-stack e-commerce grocery web application that enables users to browse products, add them to the cart, place orders, and manage profiles. It also includes a powerful admin panel to manage products, categories, and users. Designed with a clean UI and built using modern technologies like React.js, Tailwind CSS, Node.js, and MongoDB.
