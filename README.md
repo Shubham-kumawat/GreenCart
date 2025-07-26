@@ -3,7 +3,7 @@
 ## 🚀 Project Demo
 
 <p align="center">
-  <img src="./assets/demo.gif" alt="App Demo" />
+  <img src="frontend/src/assets/demo.gif" alt="App Demo" />
 </p>
 
 
